@@ -25,10 +25,18 @@ function sayHello($name)
 	<?php
 	$num = 5;
 	$string = "Quan ngu";
-	printf("num = %d va string = %s\n", $num, $string);
-	echo $num, " va ", $string;
+	printf("num = %d va string = %s", $num, $string);
+	echo $num, " va ", $string , "\n";
 	$num1 = 6;
-	echo $sum = $num + $num1;
+	echo $sum = $num + $num1, "\n";
+	?>
+
+	<?php
+
+	$arr = array(1, 2, 3);
+	foreach ($arr as $value) {
+		echo $value, "\n";
+	}
 	?>
 </body>
 
