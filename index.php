@@ -44,17 +44,29 @@ function sayHello($name)
 	printf("<p>--------------</p>")
 	?>
 
-	<?php 
+	<?php
 	$soluong = 11;
 	$gia = 200000;
-	if($soluong < 10)
+	if ($soluong < 10)
 		$thanh_tien = $soluong * $gia;
-	elseif($soluong >= 10 and $soluong <=20)
+	elseif ($soluong >= 10 and $soluong <= 20)
 		$thanh_tien = ($soluong * $gia) * 0.95;
-	else 
+	else
 		$thanh_tien = $soluong * $gia;
 
-		echo $thanh_tien;
+	echo $thanh_tien;
+	?>
+	<?php
+	printf("<p>--------------</p>")
+	?>
+	<?php
+	for ($i = 1; $i <= 200; $i++) {
+		if ($i % 2 == 0) {
+			echo '<span style="color:red; font-weight:bold;">' . $i . '</span> ';
+		} else {
+			echo '<span style="color:blue; font-style:italic;">' . $i . '</span> ';
+		}
+	}
 	?>
 
 </body>
