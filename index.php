@@ -68,7 +68,27 @@ function sayHello($name)
 		}
 	}
 	?>
+	<?php
+	printf("<p>--------------</p>")
+	?>
 
-</body>
+	<h2>Login</h2>
 
+	<form action="checklogin.php" method="POST">
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="username" required>
+		<br><br>
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" required>
+		<br><br>
+		<input type="submit" value="Login">
+	</form </form>
+	<?php
+	if (isset($_GET['error'])) {
+		$error = $_GET['error'];
+		if ($error === '1') {
+			echo '<p class="error">Username hoặc password sai. Vui lòng nhập lại.</p>';
+		}
+	}
+	?>
 </html>
